@@ -38,22 +38,25 @@ nav ul li{
 }
 
 .container{
-    min-height: 72vh;
+    min-height: 10vh;
     background-color: black;
     color: white;
    font-family: 'Varela Round', sans-serif;
    display: flex;
-   margin: 23px auto;
-   width: 70%;
+   margin: 18px auto;
+   width: 90%;
    border-radius: 12px;
    padding: 34px;
    background-image: url('bg.jpg');
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   
 }
 
 .bottom{
     position: sticky;
     bottom: 0;
-    height: 130px;
+    height: 80px;
     background-color: black;
     color: white;
     display: flex;
@@ -63,35 +66,41 @@ nav ul li{
 }
 
 .icons{
-    margin-top: 14px; 
+    margin-top: 20px; 
 }
 .icons i{
     cursor: pointer;
+	font-size:30px;
 }
 
 #myProgressBar{
     width: 80vw; 
     cursor: pointer;
+	
 }
 
 .songItemContainer{
-    margin-top: 74px;
+    margin-top: 24px;
 }
 
 .songItem{
-    height: 50px;
+    height: 28px;
     display: flex;
-    background-color: white;
-    
+    background-color: white; 
     color: black;
     margin: 12px 0;
     justify-content: space-between;
     align-items: center;
     border-radius: 34px;
+	background-color: rgb(185, 182, 145);
+}
+
+.songList h1{
+	color:chartreuse;
 }
 
 .songItem img{
-    width: 43px;
+    width: 27px;
     margin: 0 23px;
     border-radius: 34px;
 }
@@ -102,6 +111,7 @@ nav ul li{
 
 .timestamp i{
     cursor: pointer;
+	
 }
 
 .songInfo{
@@ -115,10 +125,22 @@ nav ul li{
     transition: opacity 0.4s ease-in;
 }
 
-@media (max-width:480px)
+@media (min-width:480px) and (max-width:767px)
 {
+
+	.container{
+		width:82%;
+	}
+
+	.songItem{
+		width:397px;
+	}
     .songList h1{
-		font-size: 1rem;
+		font-size: 1.2rem;
+		text-align: center;
+	}
+	.songInfo{
+		margin-top:23px;
 	}
 
 	.songItem img{
@@ -137,7 +159,7 @@ nav ul li{
         font-size:25px;
 		padding-top:1px;
 	  }
-
+	
 	  #masterSongName{
 		font-size: 8px;
         position: absolute;
@@ -146,40 +168,4 @@ nav ul li{
 	  }
 }
 
-  @media (max-width: 768px) 
-  {
-	.icons i{
-        font-size:25px;
-		padding-top:1px;
-	  }
-
-	  
-	  #masterSongName{
-		font-size: 14px;
-        position: absolute;
-        right: -19vw;
-        padding-top: 6px;
-	  }
-
-	  .container{
-		width:50%;
-	  }
-	}
-
-	  @media (max-width: 930px) 
-	
-	 {
-		 .icons i{
-			font-size:25px;
-			padding-top:1px;
-		  }
-	
-		  
-		  #masterSongName{
-			font-size: 14px;
-			position: absolute;
-			right: -19vw;
-			padding-top: 6px;  
-		  } 
-	   
-    }
+ 
