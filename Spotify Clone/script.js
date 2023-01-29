@@ -1,4 +1,4 @@
-console.log("Welcome to Spotify");
+
 
 // Initialize the Variables
 let songIndex = 0;
@@ -35,12 +35,15 @@ masterPlay.addEventListener('click', ()=>{
         masterPlay.classList.remove('fa-play-circle');
         masterPlay.classList.add('fa-pause-circle');
         gif.style.opacity = 1;
+		masterPlay.style.color = "red";
+
     }
     else{
         audioElement.pause();
         masterPlay.classList.remove('fa-pause-circle');
         masterPlay.classList.add('fa-play-circle');
         gif.style.opacity = 0;
+		masterPlay.style.color = "yellow";
     }
 })
 // Listen to Events
@@ -74,6 +77,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         gif.style.opacity = 1;
         masterPlay.classList.remove('fa-play-circle');
         masterPlay.classList.add('fa-pause-circle');
+		
     })
 })
 
